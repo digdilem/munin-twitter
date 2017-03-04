@@ -11,11 +11,13 @@ Requires perl, NET::Twitter and a Twitter OATH account
 
 =head1 CONFIGURATION
 
-Create symbolic link from /etc/munin/plugins/twitter_stats_USERNAME
-to /usr/share/munin/plugins/twitter_stats_
+Create symbolic link to /etc/munin/plugins/twitter_stats_USERNAME
+from /usr/share/munin/plugins/twitter_stats_
 
 Change USERNAME to the twitter name, minus the @ - then set the OATH info below.
 See https://dev.twitter.com/oauth for more info about getting a key.
+
+Once done, restart munin-node
 
 =head1 INTERPRETATION
 
@@ -72,7 +74,6 @@ if ( defined($ARGV[0])) {
 	print "graph_vlabel Points\n";
 	print "graph_scale no\n";
 	print "graph_category socialmedia\n";
-#	print "graph_printf %3.0lf\n";
 	print "tweets.label tweets\n";
 	print "tweets.draw LINE\n";
 	print "tweets.info Tweets made.\n";
