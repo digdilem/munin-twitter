@@ -14,5 +14,5 @@ info below.
 See https://dev.twitter.com/oauth for more info about getting a key.
 
 This script logs into the twitter API via OAuth and grabs some basic
-stats. It could be expanded for more complicated data.
+stats. It could be expanded for more complicated data
 
